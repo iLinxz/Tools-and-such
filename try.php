@@ -8,7 +8,7 @@ if ($mysqli -> connect_errno) {
 }
 
 // Perform query
-if ($result = $mysqli -> query("SELECT * FROM Persons")) {
+if ($result = $mysqli -> query("show tables;")) {
   echo "Returned rows are: " . $result -> num_rows;
   // Free result set
   $result -> free_result();
