@@ -13,5 +13,11 @@ if ($result = mysqli_query($con, "SHOW TABLES FROM bssredteam")) {
   mysqli_free_result($result);
 }
 
+$tables = $this->con->list_tables();
+foreach ($tables as $table)
+{
+  echo $table;
+}
+
 mysqli_close($con);
 ?>
